@@ -426,7 +426,6 @@ spec:
 `kubectl get svc`
 
 ![image-20250124165225274](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20250124165225274.png)
-
 写入hosts解析
 
 ![image-20250124165313671](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20250124165313671.png)

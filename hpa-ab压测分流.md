@@ -23,7 +23,8 @@
 - **Time per request**：平均每个请求花费的时间（毫秒）。
 - **Transfer rate**：传输速率（KB/sec），不包括HTTP头部。
 
-![image-20250124145132278](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20250124145132278.png)
+![image-20250124145132278](https://github.com/user-attachments/assets/c7182519-c5c2-406d-ac26-9d2a86cb5f51)
+
 
 ab显示参数：
 

@@ -426,10 +426,12 @@ spec:
 
 `kubectl get svc`
 
-![image-20250124165225274](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20250124165225274.png)
+![image-20250124165225274](https://github.com/user-attachments/assets/6704654a-ecf0-492a-8674-7c6d0cc6a5a4)
+
 写入hosts解析
 
-![image-20250124165313671](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20250124165313671.png)
+![image-20250124165313671](https://github.com/user-attachments/assets/aa9dcabb-2dd9-4452-876a-28e56c7d55e3)
+
 
 不进行hosts解析会导致http请求到不了目标客户端
 
@@ -437,41 +439,43 @@ spec:
 
 `kubectl top pod`
 
-![image-20250124164851751](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20250124164851751.png)
+![image-20250124164851751](https://github.com/user-attachments/assets/291dece7-0ba9-4247-a33c-daaa17916b38)
+
 
 `watch kubectl top pod` #持续观测pod资源使用状态
 
-![image-20250124170004293](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20250124170004293.png)
+![image-20250124170004293](https://github.com/user-attachments/assets/5a81b8b4-a899-4c0b-b64b-e3de413fee0e)
+
 
 #### 进行压测（单个pod自动扩缩容）
 
 ab -n 1000 -c 10 http://192.168.114.129/
 
-![image-20250131165943833](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20250131165943833.png)
+![image-20250131165943833](https://github.com/user-attachments/assets/95113efe-d9d3-4cb3-bb9f-b095657fca8f)
 
 pod资源状态
 
-![image-20250131170016670](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20250131170016670.png)
+![image-20250131170016670](https://github.com/user-attachments/assets/23011c81-8765-4b54-8d21-4d782c3c427f)
 
 ab -n 10000 -c 10 http://192.168.114.129/
 
-![image-20250131170109631](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20250131170109631.png)
+![image-20250131170109631](https://github.com/user-attachments/assets/8669a6a7-8482-4fbf-a702-bd70ef9440fa)
 
 pod资源状态
 
-![image-20250131170231982](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20250131170231982.png)
+![image-20250131170231982](https://github.com/user-attachments/assets/e2d8df4d-66b5-4028-aff6-f48e3296729b)
 
-![image-20250131170240649](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20250131170240649.png)
+![image-20250131170240649](https://github.com/user-attachments/assets/11d58bea-86cc-463d-aba8-ac39e43dc85f)
 
 ab -n 100000 -c 10 http://192.168.114.129/
 
-![image-20250131170735614](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20250131170735614.png)
+![image-20250131170735614](https://github.com/user-attachments/assets/da499e31-4b00-4e15-9d7d-e2e71b64077e)
 
 pod资源状态
 
-![image-20250131170637154](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20250131170637154.png)
+![image-20250131170637154](https://github.com/user-attachments/assets/14684384-feec-404f-9eeb-186a4c0b84ef)
 
-![image-20250131170647217](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20250131170647217.png)
+![image-20250131170647217](https://github.com/user-attachments/assets/ef4cd81e-debc-48aa-9725-8585977e449c)
 
 通过上诉3个例子可以很清楚的看到95%之后的请求时间大幅度增加，当前访问请求量来到10000以上时，传输速率基本稳定在2.17k
 
@@ -544,33 +548,33 @@ spec:
 
 ab -n 1000 -c 10 http://10.101.202.108/
 
-![image-20250131174714672](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20250131174714672.png)
+![image-20250131174714672](https://github.com/user-attachments/assets/d3fe1de2-1f63-42e1-bf40-c7d8176359f2)
 
 pod资源状态
 
-![image-20250131174729441](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20250131174729441.png)
+![image-20250131174729441](https://github.com/user-attachments/assets/e9f0d47b-a456-41a1-ab27-3d582429cf7c)
 
-![image-20250131174804202](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20250131174804202.png)
+![image-20250131174804202](https://github.com/user-attachments/assets/65e75f4a-7013-4613-b934-cc20bb60bf2f)
 
 ab -n 10000 -c 10 http://10.101.202.108/
 
-![image-20250131174830159](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20250131174830159.png)
+![image-20250131174830159](https://github.com/user-attachments/assets/feed0260-d7f6-4109-bd93-327dd6c0de71)
 
 pod资源状态
 
-![image-20250131174850616](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20250131174850616.png)
+![image-20250131174850616](https://github.com/user-attachments/assets/07bcf34a-7a1f-4f71-82b5-7fa7084e5f6b)
 
-![image-20250131174909589](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20250131174909589.png)
+![image-20250131174909589](https://github.com/user-attachments/assets/3c214a0d-42f6-4184-b2d3-dd2de96838ff)
 
 ab -n 100000 -c 10 http://10.101.202.108/
 
-![image-20250131175540352](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20250131175540352.png)
+![image-20250131175540352](https://github.com/user-attachments/assets/6f717962-b6d0-4897-87ef-4d661d6a9641)
 
 pod资源
 
-![image-20250131175521621](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20250131175521621.png)
+![image-20250131175521621](https://github.com/user-attachments/assets/4273eb3d-33ec-4633-80e7-8c05013dab36)
 
-![image-20250131175530487](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20250131175530487.png)
+![image-20250131175530487](https://github.com/user-attachments/assets/338743b7-8046-41e4-ac73-03054b113331)
 
 通过这3次对比我可以很清楚的发现在资源量0.2c200m的情况下2个副本所能够承受的极限访问请求在99928，1000请求总量请求总时间为0.25s，10000请求总量为2.35s而到了100000请求总量时可以清楚的发现那怕资源依旧拥有赋予的情况下，能处理的请求依旧到极限来到44s，传输速率更是从正常的3.3k/s降低到1.8k/s
 
@@ -932,7 +936,7 @@ CMD ["python", "app.py"]
 
 ##### 获取两个deployment的对应的svc写入host解析
 
-![image-20250204215644335](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20250204215644335.png)
+![image-20250204215644335](https://github.com/user-attachments/assets/199f10b0-c628-4fa0-abba-076e621e1563)
 
 ##### 访问验证
 
@@ -940,25 +944,25 @@ CMD ["python", "app.py"]
 
 `curl http://www.host.com/`
 
-![image-20250204215729059](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20250204215729059.png)
+![image-20250204215729059](https://github.com/user-attachments/assets/f70eff02-c551-4332-9749-f7141c1fb5eb)
 
-![image-20250204215809477](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20250204215809477.png)
+![image-20250204215809477](https://github.com/user-attachments/assets/133fd107-1a5e-4097-b493-acb18a326364)
 
 页面演示
 
-![image-20250204220756426](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20250204220756426.png)
+![image-20250204220756426](https://github.com/user-attachments/assets/7d2d05fb-2bdc-46c1-8a73-133b50761240)
 
 跳转svc2
 
 `curl http://www.host.com:80/api/resource/`
 
-![image-20250204220214521](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20250204220214521.png)
+![image-20250204220214521](https://github.com/user-attachments/assets/60d15075-5ed8-4872-a3e8-7abbafcf8ec1)
 
-![image-20250204220259110](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20250204220259110.png)
+![image-20250204220259110](https://github.com/user-attachments/assets/4d692ec3-f73f-4a46-b8b9-1aee394d8b65)
 
 页面演示
 
-![image-20250204221223404](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20250204221223404.png)
+![image-20250204221223404](https://github.com/user-attachments/assets/ada9abc7-bd2a-465f-84a6-4138a74ccd15)
 
 #### 基于不同域名的分流
 
@@ -995,26 +999,26 @@ spec:
 
 ##### 获取两个deploy对应的svc写入解析
 
-![image-20250204221735935](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20250204221735935.png)
+![image-20250204221735935](https://github.com/user-attachments/assets/ee71de77-0b4c-4c2b-83e0-094f8d73c760)
 
 ##### 访问验证
 
 跳转host-svc
 
-![image-20250204221931091](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20250204221931091.png)
+![image-20250204221931091](https://github.com/user-attachments/assets/81721bbb-2265-4c96-9561-70aa5385c9a1)
 
-![image-20250204221956860](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20250204221956860.png)
+![image-20250204221956860](https://github.com/user-attachments/assets/9bad4fd4-403b-4718-b849-9767d66150f6)
 
 页面演示
 
-![image-20250204222041566](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20250204222041566.png)
+![image-20250204222041566](https://github.com/user-attachments/assets/c1532f74-f3a8-4dab-92cd-10b833f15a12)
 
 跳转svc2
 
-![image-20250204222216225](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20250204222216225.png)
+![image-20250204222216225](https://github.com/user-attachments/assets/a5d309be-7879-46e7-84da-8ec31b7bb903)
 
-![image-20250204222149014](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20250204222149014.png)
+![image-20250204222149014](https://github.com/user-attachments/assets/98177583-f2e4-47e4-b6b5-8867138821c4)
 
 页面演示
 
-![image-20250204222303266](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20250204222303266.png)
+![image-20250204222303266](https://github.com/user-attachments/assets/cb24bde2-ed10-4c78-83a7-e1a6bd02c455)
